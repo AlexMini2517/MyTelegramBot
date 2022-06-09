@@ -40,8 +40,7 @@ def message_handler(update, context):
         soup = BeautifulSoup(requests.get(url).text, "html.parser")
         image = Image.open(requests.get("https://thispersondoesnotexist.com" + soup.find("img")["src"], stream=True).raw)
         
-        path = os.getcwd() + "\Telegram Bot\images\image.jpg"
-        print(path)
+        path = "/tmp/image.jpg"
         image.save(path)
         update.message.reply_photo(photo=open(path, "rb"))
         os.remove(path)
