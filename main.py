@@ -1,17 +1,14 @@
-import time
 from telegram import *
 from telegram.ext import *
 from bs4 import BeautifulSoup
 from PIL import Image
 import requests
-import responses
 import os
 
 API_KEY = "5492549254:AAH0MMsSKCI2-y_QvxdTaqEDVVAVlddZFpo"
 print("Bot started")
 
 def start_command(update, context):
-    update.message.reply_text("Hi! I'm a bot, how can I help you?")
     buttons = [
         [
             KeyboardButton("Button 1")
