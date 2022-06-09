@@ -1,0 +1,8 @@
+time
+telegram
+telegram.ext
+bs4
+PIL
+requests
+responses
+os
